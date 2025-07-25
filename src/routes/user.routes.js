@@ -8,6 +8,7 @@ import {
     logOutUser,
     refreshAccessToken, 
     registerUser, 
+    test, 
     updateAccDetails, 
     updateUserAvatar,
     updateUserCoverimage
@@ -50,5 +51,7 @@ router.route("/cover-image").patch(verifyJWT,upload.single("coverimage"),updateU
 router.route("/c/:username").get(verifyJWT,getUserChannelProfile)
 
 router.route("/history").get(verifyJWT,getWatchHistory)
+
+router.route("/test").get(test)
 
 export default router

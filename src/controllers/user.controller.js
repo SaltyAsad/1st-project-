@@ -410,6 +410,16 @@ const getWatchHistory = asynchandler(async(req,res) =>{
         .json(new apiresponse(200,user[0].watchHistory,"Watch History fetched Successfully"))
 })
 
+const test = asynchandler(async(req,res) =>{
+    
+
+    return res
+        .status(200)
+        .json(new apiresponse(200,"working properly"))
+
+})
+    
+
 export {
     registerUser,
     loginUser,
@@ -421,5 +431,6 @@ export {
     updateAccDetails,
     updateUserCoverimage,
     getUserChannelProfile,
-    getWatchHistory
+    getWatchHistory,
+    test
 }
